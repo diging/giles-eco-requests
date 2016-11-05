@@ -1,0 +1,22 @@
+package edu.asu.diging.gilesecosystem.requests;
+
+
+public interface IRequest {
+
+    public abstract String getUploadId();
+
+    public abstract void setUploadId(String uploadId);
+
+    public abstract RequestStatus getStatus();
+
+    public abstract void setStatus(RequestStatus status);
+
+    public abstract void setDocumentId(String documentId);
+
+    public abstract String getDocumentId();
+
+    public abstract void setRequestType(String requestType);
+
+    public abstract String getRequestType();
+
+}
