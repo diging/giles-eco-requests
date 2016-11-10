@@ -9,10 +9,15 @@ import edu.asu.diging.gilesecosystem.requests.RequestStatus;
 /**
  * Base class for all requests to be submitted to Kafka.
  * 
+ * When subclassing this class, make sure to call super() if you override or overload the constructor.
+ * 
  * @author jdamerow
  *
  */
-public class Request implements IRequest {
+public abstract class Request implements IRequest {
+    
+    @JsonProperty
+    private String requestId;
 
     @JsonProperty
     private String requestType;
@@ -25,6 +30,10 @@ public class Request implements IRequest {
     
     @JsonIgnore
     private RequestStatus status;  
+    
+    public Request() {
+        setRequestType(getType());
+    }
     
     /* (non-Javadoc)
      * @see edu.asu.giles.service.requests.impl.IRequest#getUploadId()
@@ -71,5 +80,15 @@ public class Request implements IRequest {
     public void setRequestType(String requestType) {
         this.requestType = requestType;
     }
+    @Override
+    public String getRequestId() {
+        return requestId;
+    }
+    @Override
+    public void setRequestId(String requestId) {
+        this.requestId = requestId;
+    }
     
+    @JsonIgnore
+    public abstract String getType();
 }

@@ -19,4 +19,8 @@ public interface IRequest {
 
     public abstract String getRequestType();
 
+    public abstract void setRequestId(String requestId);
+
+    public abstract String getRequestId();
+
 }

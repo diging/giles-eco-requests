@@ -32,11 +32,7 @@ public class StorageRequest extends Request implements IStorageRequest {
     
     @JsonProperty
     private String filename;    
-
-    public StorageRequest() {
-        this.setRequestType(REQUEST_TYPE);
-    }
-    
+   
     /* (non-Javadoc)
      * @see edu.asu.giles.service.requests.impl.IStorageRequest#getPathToFile()
      */
@@ -98,5 +94,10 @@ public class StorageRequest extends Request implements IStorageRequest {
     @Override
     public void setFilename(String filename) {
         this.filename = filename;
+    }
+
+    @Override
+    public String getType() {
+        return REQUEST_TYPE;
     }
 }
