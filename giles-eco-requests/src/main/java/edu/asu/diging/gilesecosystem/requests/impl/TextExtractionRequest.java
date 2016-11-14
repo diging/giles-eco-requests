@@ -11,6 +11,9 @@ public class TextExtractionRequest extends Request implements ITextExtractionReq
     @JsonProperty
     private String downloadUrl;
     
+    @JsonProperty
+    private String filename;
+    
     /* (non-Javadoc)
      * @see edu.asu.diging.gilesecosystem.requests.impl.ITextExtractionRequest#getDownloadUrl()
      */
@@ -25,6 +28,16 @@ public class TextExtractionRequest extends Request implements ITextExtractionReq
     @Override
     public void setDownloadUrl(String downloadUrl) {
         this.downloadUrl = downloadUrl;
+    }
+    
+    @Override
+    public String getFilename() {
+        return filename;
+    }
+
+    @Override
+    public void setFilename(String filename) {
+        this.filename = filename;
     }
     
     public String getType() {
