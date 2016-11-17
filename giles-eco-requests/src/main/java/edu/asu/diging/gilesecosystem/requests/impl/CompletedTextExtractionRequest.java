@@ -14,16 +14,16 @@ public class CompletedTextExtractionRequest extends TextExtractionRequest implem
     private String extractionDate;
     
     @JsonProperty
+    private String textFilename;
+    
+    @JsonProperty
     private String downloadUrl;
     
     @JsonProperty
     private String downloadPath;
     
     @JsonProperty
-    private List<String> pagesDownloadUrls;
-    
-    @JsonProperty
-    private List<String> pagesDownloadPaths;
+    private List<Page> pages;
 
     /* (non-Javadoc)
      * @see edu.asu.diging.gilesecosystem.requests.impl.ICompletedTextExtractionRequest#getExtractionDate()
@@ -57,22 +57,6 @@ public class CompletedTextExtractionRequest extends TextExtractionRequest implem
         this.downloadUrl = downloadUrl;
     }
 
-    /* (non-Javadoc)
-     * @see edu.asu.diging.gilesecosystem.requests.impl.ICompletedTextExtractionRequest#getPagesDownloadUrls()
-     */
-    @Override
-    public List<String> getPagesDownloadUrls() {
-        return pagesDownloadUrls;
-    }
-
-    /* (non-Javadoc)
-     * @see edu.asu.diging.gilesecosystem.requests.impl.ICompletedTextExtractionRequest#setPagesDownloadUrls(java.util.List)
-     */
-    @Override
-    public void setPagesDownloadUrls(List<String> pagesDownloadUrls) {
-        this.pagesDownloadUrls = pagesDownloadUrls;
-    }
-    
     @Override
     public String getDownloadPath() {
         return downloadPath;
@@ -82,15 +66,25 @@ public class CompletedTextExtractionRequest extends TextExtractionRequest implem
     public void setDownloadPath(String downloadPath) {
         this.downloadPath = downloadPath;
     }
-
+    
     @Override
-    public List<String> getPagesDownloadPaths() {
-        return pagesDownloadPaths;
+    public List<Page> getPages() {
+        return pages;
     }
 
     @Override
-    public void setPagesDownloadPaths(List<String> pagesDownloadPaths) {
-        this.pagesDownloadPaths = pagesDownloadPaths;
+    public void setPages(List<Page> pages) {
+        this.pages = pages;
+    }
+
+    @Override
+    public String getTextFilename() {
+        return textFilename;
+    }
+
+    @Override
+    public void setTextFilename(String textFilename) {
+        this.textFilename = textFilename;
     }
 
     /* (non-Javadoc)

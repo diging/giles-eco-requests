@@ -2,6 +2,9 @@ package edu.asu.diging.gilesecosystem.requests;
 
 import java.util.List;
 
+import edu.asu.diging.gilesecosystem.requests.impl.Page;
+
+
 public interface ICompletedTextExtractionRequest extends ITextExtractionRequest {
 
     public abstract String getExtractionDate();
@@ -12,18 +15,18 @@ public interface ICompletedTextExtractionRequest extends ITextExtractionRequest 
 
     public abstract void setDownloadUrl(String downloadUrl);
 
-    public abstract List<String> getPagesDownloadUrls();
-
-    public abstract void setPagesDownloadUrls(List<String> pagesDownloadUrls);
-
     public abstract String getType();
-
-    public abstract void setPagesDownloadPaths(List<String> pagesDownloadPaths);
-
-    public abstract List<String> getPagesDownloadPaths();
 
     public abstract void setDownloadPath(String downloadPath);
 
     public abstract String getDownloadPath();
+
+    public abstract void setPages(List<Page> pages);
+
+    public abstract List<Page> getPages();
+
+    public String getTextFilename();
+    
+    public void setTextFilename(String textFilename);
 
 }
