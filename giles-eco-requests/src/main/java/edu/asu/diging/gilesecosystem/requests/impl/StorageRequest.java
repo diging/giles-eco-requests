@@ -16,12 +16,6 @@ public class StorageRequest extends Request implements IStorageRequest {
     public final static String REQUEST_TYPE = "giles.request_type.storage";
     
     @JsonProperty
-    private String pathToFile;
-    
-    @JsonProperty
-    private String downloadUrl;
-    
-    @JsonProperty
     private FileType fileType;
     
     @JsonProperty
@@ -33,34 +27,6 @@ public class StorageRequest extends Request implements IStorageRequest {
     @JsonProperty
     private String filename;    
    
-    /* (non-Javadoc)
-     * @see edu.asu.giles.service.requests.impl.IStorageRequest#getPathToFile()
-     */
-    @Override
-    public String getPathToFile() {
-        return pathToFile;
-    }
-    /* (non-Javadoc)
-     * @see edu.asu.giles.service.requests.impl.IStorageRequest#setPathToFile(java.lang.String)
-     */
-    @Override
-    public void setPathToFile(String pathToFile) {
-        this.pathToFile = pathToFile;
-    }
-    /* (non-Javadoc)
-     * @see edu.asu.giles.service.requests.impl.IStorageRequest#getDownloadUrl()
-     */
-    @Override
-    public String getDownloadUrl() {
-        return downloadUrl;
-    }
-    /* (non-Javadoc)
-     * @see edu.asu.giles.service.requests.impl.IStorageRequest#setDownloadUrl(java.lang.String)
-     */
-    @Override
-    public void setDownloadUrl(String downloadUrl) {
-        this.downloadUrl = downloadUrl;
-    }
     @Override
     public FileType getFileType() {
         return fileType;

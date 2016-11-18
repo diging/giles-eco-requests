@@ -7,6 +7,8 @@ public class Page {
     private String filename;
     private String pathToFile;
     private String downloadUrl;
+    private String contentType;
+    private long size;
     
     public int getPageNr() {
         return pageNr;
@@ -31,5 +33,17 @@ public class Page {
     }
     public void setDownloadUrl(String downloadUrl) {
         this.downloadUrl = downloadUrl;
+    }
+    public long getSize() {
+        return size;
+    }
+    public void setSize(long size) {
+        this.size = size;
+    }
+    public String getContentType() {
+        return contentType;
+    }
+    public void setContentType(String contentType) {
+        this.contentType = contentType;
     }
 }

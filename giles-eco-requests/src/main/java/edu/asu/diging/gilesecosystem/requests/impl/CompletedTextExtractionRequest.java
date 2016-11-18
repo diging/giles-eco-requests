@@ -17,13 +17,10 @@ public class CompletedTextExtractionRequest extends TextExtractionRequest implem
     private String textFilename;
     
     @JsonProperty
-    private String downloadUrl;
-    
-    @JsonProperty
-    private String downloadPath;
-    
-    @JsonProperty
     private List<Page> pages;
+    
+    @JsonProperty
+    private long size;
 
     /* (non-Javadoc)
      * @see edu.asu.diging.gilesecosystem.requests.impl.ICompletedTextExtractionRequest#getExtractionDate()
@@ -40,33 +37,7 @@ public class CompletedTextExtractionRequest extends TextExtractionRequest implem
     public void setExtractionDate(String extractionDate) {
         this.extractionDate = extractionDate;
     }
-
-    /* (non-Javadoc)
-     * @see edu.asu.diging.gilesecosystem.requests.impl.ICompletedTextExtractionRequest#getDownloadUrl()
-     */
-    @Override
-    public String getDownloadUrl() {
-        return downloadUrl;
-    }
-
-    /* (non-Javadoc)
-     * @see edu.asu.diging.gilesecosystem.requests.impl.ICompletedTextExtractionRequest#setDownloadUrl(java.lang.String)
-     */
-    @Override
-    public void setDownloadUrl(String downloadUrl) {
-        this.downloadUrl = downloadUrl;
-    }
-
-    @Override
-    public String getDownloadPath() {
-        return downloadPath;
-    }
-
-    @Override
-    public void setDownloadPath(String downloadPath) {
-        this.downloadPath = downloadPath;
-    }
-    
+ 
     @Override
     public List<Page> getPages() {
         return pages;
@@ -85,6 +56,15 @@ public class CompletedTextExtractionRequest extends TextExtractionRequest implem
     @Override
     public void setTextFilename(String textFilename) {
         this.textFilename = textFilename;
+    }
+    @Override
+    public long getSize() {
+        return size;
+    }
+
+    @Override
+    public void setSize(long size) {
+        this.size = size;
     }
 
     /* (non-Javadoc)

@@ -23,4 +23,12 @@ public interface IRequest {
 
     public abstract String getRequestId();
 
+    public abstract String getDownloadUrl();
+
+    public abstract void setDownloadUrl(String downloadUrl);
+
+    public abstract String getDownloadPath();
+
+    public abstract void setDownloadPath(String downloadPath);
+
 }

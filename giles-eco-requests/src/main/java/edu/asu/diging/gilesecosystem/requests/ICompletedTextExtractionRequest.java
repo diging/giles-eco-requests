@@ -11,15 +11,7 @@ public interface ICompletedTextExtractionRequest extends ITextExtractionRequest 
 
     public abstract void setExtractionDate(String extractionDate);
 
-    public abstract String getDownloadUrl();
-
-    public abstract void setDownloadUrl(String downloadUrl);
-
     public abstract String getType();
-
-    public abstract void setDownloadPath(String downloadPath);
-
-    public abstract String getDownloadPath();
 
     public abstract void setPages(List<Page> pages);
 
@@ -28,5 +20,9 @@ public interface ICompletedTextExtractionRequest extends ITextExtractionRequest 
     public String getTextFilename();
     
     public void setTextFilename(String textFilename);
+
+    public abstract long getSize();
+
+    public abstract void setSize(long size);
 
 }

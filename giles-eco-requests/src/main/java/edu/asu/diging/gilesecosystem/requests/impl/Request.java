@@ -29,7 +29,14 @@ public abstract class Request implements IRequest {
     private String documentId;
     
     @JsonIgnore
-    private RequestStatus status;  
+    private RequestStatus status; 
+    
+    @JsonProperty
+    private String downloadUrl;
+    
+    @JsonProperty
+    private String downloadPath;
+    
     
     public Request() {
         setRequestType(getType());
@@ -88,6 +95,39 @@ public abstract class Request implements IRequest {
     public void setRequestId(String requestId) {
         this.requestId = requestId;
     }
+    
+    /* (non-Javadoc)
+     * @see edu.asu.diging.gilesecosystem.requests.impl.ITextExtractionRequest#getDownloadUrl()
+     */
+    @Override
+    public String getDownloadUrl() {
+        return downloadUrl;
+    }
+
+    /* (non-Javadoc)
+     * @see edu.asu.diging.gilesecosystem.requests.impl.ITextExtractionRequest#setDownloadUrl(java.lang.String)
+     */
+    @Override
+    public void setDownloadUrl(String downloadUrl) {
+        this.downloadUrl = downloadUrl;
+    }
+    
+    /* (non-Javadoc)
+     * @see edu.asu.diging.gilesecosystem.requests.impl.ICompletedImageExtractionRequest#getDownloadPath()
+     */
+    @Override
+    public String getDownloadPath() {
+        return downloadPath;
+    }
+
+    /* (non-Javadoc)
+     * @see edu.asu.diging.gilesecosystem.requests.impl.ICompletedImageExtractionRequest#setDownloadPath(java.lang.String)
+     */
+    @Override
+    public void setDownloadPath(String downloadPath) {
+        this.downloadPath = downloadPath;
+    }
+    
     
     @JsonIgnore
     public abstract String getType();
