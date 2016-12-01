@@ -28,6 +28,9 @@ public abstract class Request implements IRequest {
     @JsonProperty
     private String documentId;
     
+    @JsonProperty
+    private String fileId;
+    
     @JsonIgnore
     private RequestStatus status; 
     
@@ -126,6 +129,16 @@ public abstract class Request implements IRequest {
     @Override
     public void setDownloadPath(String downloadPath) {
         this.downloadPath = downloadPath;
+    }
+    
+    @Override
+    public String getFileId() {
+        return fileId;
+    }
+
+    @Override
+    public void setFileId(String fileId) {
+        this.fileId = fileId;
     }
     
     

@@ -12,9 +12,6 @@ public class OCRRequest extends Request implements IOCRRequest {
     private String filename;
     
     @JsonProperty
-    private String fileid;
-
-    @JsonProperty
     private int pagenr;
     
     /* (non-Javadoc)
@@ -31,16 +28,6 @@ public class OCRRequest extends Request implements IOCRRequest {
     @Override
     public void setFilename(String filename) {
         this.filename = filename;
-    }
-    
-    @Override
-    public String getFileid() {
-        return fileid;
-    }
-
-    @Override
-    public void setFileid(String fileid) {
-        this.fileid = fileid;
     }
     
     @Override

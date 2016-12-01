@@ -23,11 +23,12 @@ public class RequestFactory<T extends IRequest, V extends T> implements IRequest
      * @see edu.asu.giles.service.kafka.requests.IRequestFactory#createRequest(java.lang.String)
      */
     @Override
-    public T createRequest(String uploadId) throws InstantiationException, IllegalAccessException {
+    public T createRequest(String id, String uploadId) throws InstantiationException, IllegalAccessException {
         if (classToInstantiate == null) {
             throw new MisconfigurationException("RequestFactory is not properly configured and doesn't know what objects to create.");
         }
         T request = classToInstantiate.newInstance();
+        request.setRequestId(id);
         request.setUploadId(uploadId);
         request.setStatus(RequestStatus.NEW);
         return request;

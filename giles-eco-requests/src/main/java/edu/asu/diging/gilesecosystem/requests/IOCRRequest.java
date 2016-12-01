@@ -10,8 +10,4 @@ public interface IOCRRequest extends IRequest {
 
     public abstract int getPagenr();
 
-    public abstract void setFileid(String fileid);
-
-    public abstract String getFileid();
-
 }

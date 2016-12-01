@@ -6,8 +6,8 @@ public interface ICompletedStorageRequest extends IStorageRequest {
 
     public abstract void setStorageDate(String storageDate);
 
-    public abstract String getFileId();
+    public abstract String getStoredFileId();
 
-    public abstract void setFileId(String fileId);
+    public abstract void setStoredFileId(String fileId);
 
 }

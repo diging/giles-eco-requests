@@ -12,7 +12,7 @@ public class CompletedStorageRequest extends StorageRequest implements IComplete
     private String storageDate;
     
     @JsonProperty
-    private String fileId;
+    private String storedfileId;
     
     public CompletedStorageRequest() {
         this.setRequestType(REQUEST_TYPE);
@@ -38,16 +38,16 @@ public class CompletedStorageRequest extends StorageRequest implements IComplete
      * @see edu.asu.diging.gilesecosystem.requests.impl.ICompletedStorageRequest#getFileId()
      */
     @Override
-    public String getFileId() {
-        return fileId;
+    public String getStoredFileId() {
+        return storedfileId;
     }
 
     /* (non-Javadoc)
      * @see edu.asu.diging.gilesecosystem.requests.impl.ICompletedStorageRequest#setFileId(java.lang.String)
      */
     @Override
-    public void setFileId(String fileId) {
-        this.fileId = fileId;
+    public void setStoredFileId(String fileId) {
+        this.storedfileId = fileId;
     }
     
 }

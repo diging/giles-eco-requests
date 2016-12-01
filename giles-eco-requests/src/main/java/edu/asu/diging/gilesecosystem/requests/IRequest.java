@@ -31,4 +31,8 @@ public interface IRequest {
 
     public abstract void setDownloadPath(String downloadPath);
 
+    public abstract void setFileId(String fileId);
+
+    public abstract String getFileId();
+
 }

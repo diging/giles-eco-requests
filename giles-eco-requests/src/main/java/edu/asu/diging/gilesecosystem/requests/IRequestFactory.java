@@ -11,7 +11,7 @@ import edu.asu.diging.gilesecosystem.requests.impl.Request;
  */
 public interface IRequestFactory<T, V extends T> {
 
-    public abstract T createRequest(String uploadId) throws InstantiationException,
+    public abstract T createRequest(String id, String uploadId) throws InstantiationException,
             IllegalAccessException;
 
     public abstract void config(Class<V> classToInstantiate);
