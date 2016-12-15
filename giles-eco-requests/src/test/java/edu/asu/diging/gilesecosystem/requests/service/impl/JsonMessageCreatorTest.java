@@ -40,7 +40,7 @@ public class JsonMessageCreatorTest {
         
         String msg = creatorToTest.createMessage(request);
         
-        String expected = IOUtils.toString(getClass().getResourceAsStream("storageRequest.json"), "UTF-8");
+        String expected = IOUtils.toString(getClass().getResourceAsStream("/storageRequest.json"), "UTF-8");
         
         Assert.assertEquals(expected, msg);
     }
