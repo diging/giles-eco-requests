@@ -69,17 +69,6 @@
 
 	</dependencies>
 
-	<profiles>
-		<profile>
-			<id>jenkins</id>
-			<build>
-				<plugins>
-
-				</plugins>
-			</build>
-		</profile>
-	</profiles>
-
 	<build>
 		<plugins>
 			<plugin>
