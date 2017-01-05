@@ -46,6 +46,7 @@ public class KafkaRequestProducer implements IRequestProducer {
     
     private Map<String, Object> senderProps() {
         Map<String, Object> props = new HashMap<>();
+        props.put(ProducerConfig.CLIENT_ID_CONFIG, kafkaConfig.getProducerId());
         props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, kafkaConfig.getHosts());
         props.put(ProducerConfig.RETRIES_CONFIG, 0);
         props.put(ProducerConfig.BATCH_SIZE_CONFIG, 16384);
