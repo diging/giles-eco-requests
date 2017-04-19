@@ -12,7 +12,7 @@ public class CompletedStorageRequest extends StorageRequest implements IComplete
     private String storageDate;
     
     @JsonProperty
-    private String storedfileId;
+    private String storedFileId;
     
     public CompletedStorageRequest() {
         this.setRequestType(REQUEST_TYPE);
@@ -39,7 +39,7 @@ public class CompletedStorageRequest extends StorageRequest implements IComplete
      */
     @Override
     public String getStoredFileId() {
-        return storedfileId;
+        return storedFileId;
     }
 
     /* (non-Javadoc)
@@ -47,7 +47,7 @@ public class CompletedStorageRequest extends StorageRequest implements IComplete
      */
     @Override
     public void setStoredFileId(String fileId) {
-        this.storedfileId = fileId;
+        this.storedFileId = fileId;
     }
     
 }

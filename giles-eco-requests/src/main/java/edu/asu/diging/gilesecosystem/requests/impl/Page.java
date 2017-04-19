@@ -3,6 +3,7 @@ package edu.asu.diging.gilesecosystem.requests.impl;
 
 public class Page {
 
+    private long id;
     private int pageNr;
     private String filename;
     private String pathToFile;
@@ -45,5 +46,11 @@ public class Page {
     }
     public void setContentType(String contentType) {
         this.contentType = contentType;
+    }
+    public long getId() {
+        return id;
+    }
+    public void setId(long id) {
+        this.id = id;
     }
 }

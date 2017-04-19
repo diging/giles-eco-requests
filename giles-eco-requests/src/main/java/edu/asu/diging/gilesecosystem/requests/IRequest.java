@@ -35,4 +35,8 @@ public interface IRequest {
 
     public abstract String getFileId();
 
+    void setId(long id);
+
+    long getId();
+
 }

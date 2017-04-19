@@ -17,6 +17,9 @@ import edu.asu.diging.gilesecosystem.requests.RequestStatus;
 public abstract class Request implements IRequest {
     
     @JsonProperty
+    private long id;
+    
+    @JsonProperty
     private String requestId;
 
     @JsonProperty
@@ -141,6 +144,15 @@ public abstract class Request implements IRequest {
         this.fileId = fileId;
     }
     
+    @Override
+    public long getId() {
+        return id;
+    }
+
+    @Override
+    public void setId(long id) {
+        this.id = id;
+    }
     
     @JsonIgnore
     public abstract String getType();
