@@ -1,1 +1,1 @@
-{"id":0,"requestId":"requestId","requestType":"requestType","uploadId":"uploadId","documentId":"docId","fileId":"fileId","downloadUrl":"downloadUrl","downloadPath":"downloadPath","fileType":"IMAGE","username":"username","uploadDate":"uplodadDate","filename":"filename"}
+{"id":0,"requestId":"requestId","requestType":"requestType","uploadId":"uploadId","documentId":"docId","fileId":"fileId","status":"COMPLETE","downloadUrl":"downloadUrl","downloadPath":"downloadPath","errorMsg":null,"fileType":"IMAGE","username":"username","uploadDate":"uplodadDate","filename":"filename"}

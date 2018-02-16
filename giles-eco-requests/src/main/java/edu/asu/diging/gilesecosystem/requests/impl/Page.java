@@ -1,5 +1,6 @@
 package edu.asu.diging.gilesecosystem.requests.impl;
 
+import edu.asu.diging.gilesecosystem.requests.PageStatus;
 
 public class Page {
 
@@ -10,6 +11,8 @@ public class Page {
     private String downloadUrl;
     private String contentType;
     private long size;
+    private PageStatus status;
+    private String errorMsg;
     
     public int getPageNr() {
         return pageNr;
@@ -52,5 +55,17 @@ public class Page {
     }
     public void setId(long id) {
         this.id = id;
+    }
+    public PageStatus getStatus() {
+        return status;
+    }
+    public void setStatus(PageStatus status) {
+        this.status = status;
+    }
+    public String getErrorMsg() {
+        return errorMsg;
+    }
+    public void setErrorMsg(String errorMsg) {
+        this.errorMsg = errorMsg;
     }
 }

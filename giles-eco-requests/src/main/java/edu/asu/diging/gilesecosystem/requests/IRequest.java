@@ -39,4 +39,8 @@ public interface IRequest {
 
     long getId();
 
+    void setErrorMsg(String errorMsg);
+
+    String getErrorMsg();
+
 }

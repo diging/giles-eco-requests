@@ -1,6 +1,7 @@
 package edu.asu.diging.gilesecosystem.requests.impl;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import edu.asu.diging.gilesecosystem.requests.IRequest;
@@ -14,6 +15,7 @@ import edu.asu.diging.gilesecosystem.requests.RequestStatus;
  * @author jdamerow
  *
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public abstract class Request implements IRequest {
     
     @JsonProperty
@@ -34,7 +36,7 @@ public abstract class Request implements IRequest {
     @JsonProperty
     private String fileId;
     
-    @JsonIgnore
+    @JsonProperty 
     private RequestStatus status; 
     
     @JsonProperty
@@ -42,6 +44,9 @@ public abstract class Request implements IRequest {
     
     @JsonProperty
     private String downloadPath;
+    
+    @JsonProperty
+    private String errorMsg;   
     
     
     public Request() {
@@ -134,6 +139,16 @@ public abstract class Request implements IRequest {
         this.downloadPath = downloadPath;
     }
     
+    @Override
+    public String getErrorMsg() {
+        return errorMsg;
+    }
+
+    @Override
+    public void setErrorMsg(String errorMsg) {
+        this.errorMsg = errorMsg;
+    }
+
     @Override
     public String getFileId() {
         return fileId;
