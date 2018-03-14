@@ -19,4 +19,16 @@ public interface ICompletionNotificationRequest extends IRequest {
 
     public abstract void setNotifier(String notifier);
 
+    void setSize(long size);
+
+    long getSize();
+
+    void setFilename(String textFilename);
+
+    String getFilename();
+
+    void setContentType(String contentType);
+
+    String getContentType();
+
 }
