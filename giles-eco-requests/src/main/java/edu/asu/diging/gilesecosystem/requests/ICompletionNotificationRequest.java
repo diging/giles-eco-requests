@@ -13,7 +13,7 @@ public interface ICompletionNotificationRequest extends IRequest {
      * Returns an id to identify the sender of the request. The id should be
      * registred for Giles for display.
      * 
-     * @return
+     * @return id of the sender of the request
      */
     public abstract String getNotifier();
 
