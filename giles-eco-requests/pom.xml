@@ -1,8 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>edu.asu.diging</groupId>
-	<artifactId>giles-eco-requests</artifactId>
-	<version>0.8</version>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>edu.asu.diging</groupId>
+    <artifactId>giles-eco-requests</artifactId>
+    <version>0.9</version>
 
     <properties>
         <org.springframework-version>4.3.1.RELEASE</org.springframework-version>
@@ -12,7 +12,7 @@
 
     <name>${project.groupId}:${project.artifactId}</name>
     <description>
-        Plugin for the Giles Ecoystem that provides request classes for components to
+        Plugin for the Giles Ecosystem that provides request classes for components to
         communicate with each other, and helper classes for communicating with Kafka.
     </description>
     <url>https://github.com/diging/giles-eco-requests</url>
