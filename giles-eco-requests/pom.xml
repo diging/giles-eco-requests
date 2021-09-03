@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>edu.asu.diging</groupId>
     <artifactId>giles-eco-requests</artifactId>
-    <version>0.10-SNAPSHOT</version>
+    <version>0.11-SNAPSHOT</version>
 
     <properties>
         <org.springframework-version>4.3.1.RELEASE</org.springframework-version>
