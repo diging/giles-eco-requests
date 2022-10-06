@@ -1,5 +1,7 @@
 package edu.asu.diging.gilesecosystem.requests.impl;
 
+import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import edu.asu.diging.gilesecosystem.requests.ICompletionNotificationRequest;
@@ -18,6 +20,15 @@ public class CompletionNotificationRequest extends Request implements ICompletio
     
     @JsonProperty
     private String contentType;
+    
+    @JsonProperty
+    private String extractionDate;
+    
+    @JsonProperty
+    private String imageFilename;
+    
+    @JsonProperty
+    private List<Page> pages;
 
     /* (non-Javadoc)
      * @see edu.asu.diging.gilesecosystem.requests.impl.ICompletionNotificationRequest#getNotifier()
@@ -63,6 +74,36 @@ public class CompletionNotificationRequest extends Request implements ICompletio
     @Override
     public void setContentType(String contentType) {
         this.contentType = contentType;
+    }
+    
+    @Override
+    public String getExtractionDate() {
+        return extractionDate;
+    }
+
+    @Override
+    public void setExtractionDate(String extractionDate) {
+        this.extractionDate = extractionDate;
+    }
+
+    @Override
+    public List<Page> getPages() {
+        return pages;
+    }
+
+    @Override
+    public void setPages(List<Page> pages) {
+        this.pages = pages;
+    }
+
+    @Override
+    public String getImageFilename() {
+        return imageFilename;
+    }
+
+    @Override
+    public void setImageFilename(String imgFilename) {
+        this.imageFilename = imgFilename;
     }
 
     @Override
