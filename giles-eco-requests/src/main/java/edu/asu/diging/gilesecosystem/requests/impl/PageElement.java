@@ -1,16 +1,14 @@
 package edu.asu.diging.gilesecosystem.requests.impl;
 
-import java.util.List;
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import edu.asu.diging.gilesecosystem.requests.PageStatus;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Page {
+public class PageElement {
 
     private long id;
-    private int pageNr;
+    private String type;
     private String filename;
     private String pathToFile;
     private String downloadUrl;
@@ -18,13 +16,18 @@ public class Page {
     private long size;
     private PageStatus status;
     private String errorMsg;
-    private List<PageElement> pageElements;
     
-    public int getPageNr() {
-        return pageNr;
+    public long getId() {
+        return id;
     }
-    public void setPageNr(int pageNr) {
-        this.pageNr = pageNr;
+    public void setId(long id) {
+        this.id = id;
+    }
+    public String getType() {
+        return type;
+    }
+    public void setType(String type) {
+        this.type = type;
     }
     public String getFilename() {
         return filename;
@@ -44,23 +47,17 @@ public class Page {
     public void setDownloadUrl(String downloadUrl) {
         this.downloadUrl = downloadUrl;
     }
-    public long getSize() {
-        return size;
-    }
-    public void setSize(long size) {
-        this.size = size;
-    }
     public String getContentType() {
         return contentType;
     }
     public void setContentType(String contentType) {
         this.contentType = contentType;
     }
-    public long getId() {
-        return id;
+    public long getSize() {
+        return size;
     }
-    public void setId(long id) {
-        this.id = id;
+    public void setSize(long size) {
+        this.size = size;
     }
     public PageStatus getStatus() {
         return status;
@@ -74,10 +71,6 @@ public class Page {
     public void setErrorMsg(String errorMsg) {
         this.errorMsg = errorMsg;
     }
-    public List<PageElement> getPageElements() {
-        return pageElements;
-    }
-    public void setPageElements(List<PageElement> pageElements) {
-        this.pageElements = pageElements;
-    }
+    
+    
 }

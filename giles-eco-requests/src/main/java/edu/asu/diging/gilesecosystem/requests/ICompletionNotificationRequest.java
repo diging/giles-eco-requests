@@ -1,5 +1,9 @@
 package edu.asu.diging.gilesecosystem.requests;
 
+import java.util.List;
+
+import edu.asu.diging.gilesecosystem.requests.impl.Page;
+
 /**
  * Requests of this type should be used to notify Giles about the completion of a 
  * process that is not part of the core Giles Ecosystem infrastructure.
@@ -30,5 +34,17 @@ public interface ICompletionNotificationRequest extends IRequest {
     void setContentType(String contentType);
 
     String getContentType();
+
+    void setImageFilename(String imgFilename);
+
+    String getImageFilename();
+
+    void setPages(List<Page> pages);
+
+    List<Page> getPages();
+
+    void setExtractionDate(String extractionDate);
+
+    String getExtractionDate();
 
 }
