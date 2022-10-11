@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>edu.asu.diging</groupId>
     <artifactId>giles-eco-requests</artifactId>
-    <version>0.12</version>
+    <version>0.13</version>
 
     <properties>
         <org.springframework-version>5.2.22.RELEASE</org.springframework-version>
@@ -144,6 +144,12 @@
                 </exclusion>
             </exclusions>
             <scope>runtime</scope>
+        </dependency>
+        
+        <dependency>
+          <groupId>javax.annotation</groupId>
+          <artifactId>javax.annotation-api</artifactId>
+          <version>1.3.2</version>
         </dependency>
 
     </dependencies>
