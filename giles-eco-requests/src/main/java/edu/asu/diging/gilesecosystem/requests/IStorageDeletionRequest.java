@@ -8,4 +8,8 @@ public interface IStorageDeletionRequest extends IRequest {
     public abstract void setFileType(FileType fileType);
 
     public abstract FileType getFileType();
+
+    public abstract String getStorageFileId();
+
+    public abstract void setStorageFileId(String storageFileId);
 }

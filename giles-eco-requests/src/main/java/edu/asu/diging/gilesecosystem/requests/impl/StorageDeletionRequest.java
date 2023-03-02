@@ -14,6 +14,9 @@ public class StorageDeletionRequest extends Request implements IStorageDeletionR
     @JsonProperty
     private String username;
     
+    @JsonProperty
+    private String storageFileId;
+    
     @Override
     public String getType() {
         return REQUEST_TYPE;
@@ -37,5 +40,15 @@ public class StorageDeletionRequest extends Request implements IStorageDeletionR
     @Override
     public void setUsername(String username) {
         this.username = username;
+    }
+    
+    @Override
+    public String getStorageFileId() {
+        return storageFileId;
+    }
+
+    @Override
+    public void setStorageFileId(String storageFileId) {
+        this.storageFileId = storageFileId;
     }
 }
