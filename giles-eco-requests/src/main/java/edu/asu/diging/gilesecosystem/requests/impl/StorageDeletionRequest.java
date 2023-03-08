@@ -11,6 +11,9 @@ public class StorageDeletionRequest extends Request implements IStorageDeletionR
     @JsonProperty
     private String storageFileId;
     
+    @JsonProperty
+    private boolean isOldFileVersion;
+    
     @Override
     public String getType() {
         return REQUEST_TYPE;
@@ -24,5 +27,15 @@ public class StorageDeletionRequest extends Request implements IStorageDeletionR
     @Override
     public void setStorageFileId(String storageFileId) {
         this.storageFileId = storageFileId;
+    }
+
+    @Override
+    public boolean getIsOldFileVersion() {
+        return this.isOldFileVersion;
+    }
+
+    @Override
+    public void setIsOldFileVersion(boolean isOldFileVersion) {
+        this.isOldFileVersion = isOldFileVersion;
     }
 }
