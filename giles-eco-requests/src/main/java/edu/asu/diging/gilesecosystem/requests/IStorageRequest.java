@@ -17,4 +17,8 @@ public interface IStorageRequest extends IRequest {
     public abstract void setFilename(String filename);
 
     public abstract String getFilename();
+    
+    public abstract void setPageNr(int pageNr);
+
+    public abstract int getPageNr();
 }

@@ -25,7 +25,10 @@ public class StorageRequest extends Request implements IStorageRequest {
     private String uploadDate;
     
     @JsonProperty
-    private String filename;    
+    private String filename;
+    
+    @JsonProperty
+    private int pageNr;
    
     @Override
     public FileType getFileType() {
@@ -65,5 +68,15 @@ public class StorageRequest extends Request implements IStorageRequest {
     @Override
     public String getType() {
         return REQUEST_TYPE;
+    }
+    
+    @Override
+    public void setPageNr(int pageNr) {
+        this.pageNr = pageNr;
+    }
+    
+    @Override
+    public int getPageNr() {
+        return this.pageNr;
     }
 }
