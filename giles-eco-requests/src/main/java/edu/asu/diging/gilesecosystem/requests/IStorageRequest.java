@@ -21,4 +21,8 @@ public interface IStorageRequest extends IRequest {
     public abstract void setPageNr(int pageNr);
 
     public abstract int getPageNr();
+
+    public abstract boolean getImageExtracted();
+
+    public abstract void setImageExtracted(boolean imageExtracted);
 }

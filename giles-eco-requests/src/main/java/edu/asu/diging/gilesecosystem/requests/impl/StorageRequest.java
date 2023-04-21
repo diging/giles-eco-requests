@@ -29,6 +29,9 @@ public class StorageRequest extends Request implements IStorageRequest {
     
     @JsonProperty
     private int pageNr;
+    
+    @JsonProperty
+    private boolean imageExtracted;
    
     @Override
     public FileType getFileType() {
@@ -78,5 +81,15 @@ public class StorageRequest extends Request implements IStorageRequest {
     @Override
     public int getPageNr() {
         return this.pageNr;
+    }
+    
+    @Override
+    public boolean getImageExtracted() {
+        return imageExtracted;
+    }
+
+    @Override
+    public void setImageExtracted(boolean imageExtracted) {
+        this.imageExtracted = imageExtracted;
     }
 }

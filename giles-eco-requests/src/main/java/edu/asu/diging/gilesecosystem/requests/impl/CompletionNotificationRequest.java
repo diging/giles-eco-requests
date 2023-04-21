@@ -29,6 +29,9 @@ public class CompletionNotificationRequest extends Request implements ICompletio
     
     @JsonProperty
     private List<Page> pages;
+    
+    @JsonProperty
+    private boolean imageExtracted;
 
     /* (non-Javadoc)
      * @see edu.asu.diging.gilesecosystem.requests.impl.ICompletionNotificationRequest#getNotifier()
@@ -109,5 +112,15 @@ public class CompletionNotificationRequest extends Request implements ICompletio
     @Override
     public String getType() {
         return REQUEST_TYPE;
-    }  
+    }
+    
+    @Override
+    public boolean getImageExtracted() {
+        return imageExtracted;
+    }
+
+    @Override
+    public void setImageExtracted(boolean imageExtracted) {
+        this.imageExtracted = imageExtracted;
+    }
 }

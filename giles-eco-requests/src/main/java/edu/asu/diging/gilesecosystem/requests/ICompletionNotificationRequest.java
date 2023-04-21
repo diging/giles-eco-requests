@@ -47,4 +47,8 @@ public interface ICompletionNotificationRequest extends IRequest {
 
     String getExtractionDate();
 
+    boolean getImageExtracted();
+    
+    void setImageExtracted(boolean imageExtracted);
+
 }
