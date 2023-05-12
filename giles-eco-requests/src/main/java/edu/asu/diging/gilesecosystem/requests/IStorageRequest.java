@@ -21,8 +21,16 @@ public interface IStorageRequest extends IRequest {
     public abstract void setPageNr(int pageNr);
 
     public abstract int getPageNr();
-
+    
+    /**
+    Checks if the image has been extracted.
+    @return {@code true} if the image has been extracted, {@code false} otherwise.
+    */
     public abstract boolean getImageExtracted();
-
+    
+    /**
+    Sets the image extraction status.
+    @param imageExtracted {@code true} to indicate that the image has been extracted, {@code false} otherwise.
+    */
     public abstract void setImageExtracted(boolean imageExtracted);
 }

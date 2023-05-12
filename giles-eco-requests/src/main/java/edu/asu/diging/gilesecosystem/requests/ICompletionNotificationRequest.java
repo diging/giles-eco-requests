@@ -46,9 +46,17 @@ public interface ICompletionNotificationRequest extends IRequest {
     void setExtractionDate(String extractionDate);
 
     String getExtractionDate();
-
+    
+    /**
+    Retrieves the current status of image extraction.
+    @return {@code true} if the image has been extracted, {@code false} otherwise.
+    */
     boolean getImageExtracted();
     
+    /**
+    Sets the status of image extraction.
+    @param imageExtracted {@code true} to indicate that the image has been extracted, {@code false} otherwise.
+    */
     void setImageExtracted(boolean imageExtracted);
 
 }
