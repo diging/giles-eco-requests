@@ -51,7 +51,7 @@ public interface ICompletionNotificationRequest extends IRequest {
     Retrieves the current status of image extraction.
     @return {@code true} if the image has been extracted, {@code false} otherwise.
     */
-    boolean getImageExtracted();
+    boolean isImageExtracted();
     
     /**
     Sets the status of image extraction.

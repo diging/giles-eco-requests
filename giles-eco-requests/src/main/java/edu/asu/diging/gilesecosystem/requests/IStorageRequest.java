@@ -26,7 +26,7 @@ public interface IStorageRequest extends IRequest {
     Checks if the image has been extracted.
     @return {@code true} if the image has been extracted, {@code false} otherwise.
     */
-    public abstract boolean getImageExtracted();
+    public abstract boolean isImageExtracted();
     
     /**
     Sets the image extraction status.

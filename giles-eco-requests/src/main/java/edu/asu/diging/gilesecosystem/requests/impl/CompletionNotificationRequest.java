@@ -115,7 +115,7 @@ public class CompletionNotificationRequest extends Request implements ICompletio
     }
     
     @Override
-    public boolean getImageExtracted() {
+    public boolean isImageExtracted() {
         return imageExtracted;
     }
 

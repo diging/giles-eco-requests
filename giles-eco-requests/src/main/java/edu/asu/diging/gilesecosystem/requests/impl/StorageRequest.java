@@ -84,7 +84,7 @@ public class StorageRequest extends Request implements IStorageRequest {
     }
     
     @Override
-    public boolean getImageExtracted() {
+    public boolean isImageExtracted() {
         return imageExtracted;
     }
 
