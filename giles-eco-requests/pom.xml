@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>edu.asu.diging</groupId>
     <artifactId>giles-eco-requests</artifactId>
-    <version>0.14</version>
+    <version>0.15-SNAPSHOT</version>
 
     <properties>
         <org.springframework-version>5.2.22.RELEASE</org.springframework-version>
@@ -214,7 +214,8 @@
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <release>11</release>
+                    <source>11</source>
+                    <target>11</target>
                 </configuration>
             </plugin>
             <plugin>
