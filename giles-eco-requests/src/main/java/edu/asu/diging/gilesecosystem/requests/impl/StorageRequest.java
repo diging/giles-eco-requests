@@ -31,7 +31,7 @@ public class StorageRequest extends Request implements IStorageRequest {
     private int pageNr;
     
     @JsonProperty
-    private boolean imageExtracted;
+    private boolean derivedFile;
    
     @Override
     public FileType getFileType() {
@@ -84,12 +84,12 @@ public class StorageRequest extends Request implements IStorageRequest {
     }
     
     @Override
-    public boolean isImageExtracted() {
-        return imageExtracted;
+    public boolean isDerivedFile() {
+        return derivedFile;
     }
 
     @Override
-    public void setImageExtracted(boolean imageExtracted) {
-        this.imageExtracted = imageExtracted;
+    public void setDerivedFile(boolean derivedFile) {
+        this.derivedFile = derivedFile;
     }
 }

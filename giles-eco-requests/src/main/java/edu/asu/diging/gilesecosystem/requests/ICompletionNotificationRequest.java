@@ -48,15 +48,15 @@ public interface ICompletionNotificationRequest extends IRequest {
     String getExtractionDate();
     
     /**
-    Retrieves the current status of image extraction.
-    @return {@code true} if the image has been extracted, {@code false} otherwise.
+    Checks if the the file is a derived file.
+    @return {@code true} if the file is derived from a non base component, {@code false} otherwise.
     */
-    boolean isImageExtracted();
+    public abstract boolean isDerivedFile();
     
     /**
-    Sets the status of image extraction.
-    @param imageExtracted {@code true} to indicate that the image has been extracted, {@code false} otherwise.
+    Sets the value if a file is dervied from a non base component or not.
+    @param derivedFile {@code true} the file is derived from a non base component, {@code false} otherwise.
     */
-    void setImageExtracted(boolean imageExtracted);
+    public abstract void setDerivedFile(boolean derivedFile);
 
 }
