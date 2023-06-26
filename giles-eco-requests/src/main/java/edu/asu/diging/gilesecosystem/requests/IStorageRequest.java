@@ -17,11 +17,7 @@ public interface IStorageRequest extends IRequest {
     public abstract void setFilename(String filename);
 
     public abstract String getFilename();
-    
-    public abstract void setPageNr(int pageNr);
 
-    public abstract int getPageNr();
-    
     /**
     Checks if the the file is a derived file.
     @return {@code true} if the file is derived from a non base component, {@code false} otherwise.

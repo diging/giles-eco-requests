@@ -26,10 +26,7 @@ public class StorageRequest extends Request implements IStorageRequest {
     
     @JsonProperty
     private String filename;
-    
-    @JsonProperty
-    private int pageNr;
-    
+  
     @JsonProperty
     private boolean derivedFile;
    
@@ -72,17 +69,7 @@ public class StorageRequest extends Request implements IStorageRequest {
     public String getType() {
         return REQUEST_TYPE;
     }
-    
-    @Override
-    public void setPageNr(int pageNr) {
-        this.pageNr = pageNr;
-    }
-    
-    @Override
-    public int getPageNr() {
-        return this.pageNr;
-    }
-    
+
     @Override
     public boolean isDerivedFile() {
         return derivedFile;

@@ -58,5 +58,4 @@ public interface ICompletionNotificationRequest extends IRequest {
     @param derivedFile {@code true} the file is derived from a non base component, {@code false} otherwise.
     */
     public abstract void setDerivedFile(boolean derivedFile);
-
 }
