@@ -28,7 +28,7 @@ public class StorageRequest extends Request implements IStorageRequest {
     private String filename;
   
     @JsonProperty
-    private boolean derivedFile;
+    private String generatedByService;
    
     @Override
     public FileType getFileType() {
@@ -71,12 +71,12 @@ public class StorageRequest extends Request implements IStorageRequest {
     }
 
     @Override
-    public boolean isDerivedFile() {
-        return derivedFile;
+    public String getGeneratedByService() {
+        return generatedByService;
     }
 
     @Override
-    public void setDerivedFile(boolean derivedFile) {
-        this.derivedFile = derivedFile;
+    public void setGeneratedByService(String generatedByService) {
+        this.generatedByService = generatedByService;
     }
 }

@@ -31,7 +31,7 @@ public class CompletionNotificationRequest extends Request implements ICompletio
     private List<Page> pages;
     
     @JsonProperty
-    private boolean derivedFile;
+    private String generatedByService;
 
     /* (non-Javadoc)
      * @see edu.asu.diging.gilesecosystem.requests.impl.ICompletionNotificationRequest#getNotifier()
@@ -115,12 +115,12 @@ public class CompletionNotificationRequest extends Request implements ICompletio
     }
     
     @Override
-    public boolean isDerivedFile() {
-        return derivedFile;
+    public String getGeneratedByService() {
+        return generatedByService;
     }
 
     @Override
-    public void setDerivedFile(boolean derivedFile) {
-        this.derivedFile = derivedFile;
+    public void setGeneratedByService(String generatedByService) {
+        this.generatedByService = generatedByService;
     }
 }
