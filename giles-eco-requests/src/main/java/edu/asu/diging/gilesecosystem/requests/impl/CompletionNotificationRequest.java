@@ -29,9 +29,6 @@ public class CompletionNotificationRequest extends Request implements ICompletio
     
     @JsonProperty
     private List<Page> pages;
-    
-    @JsonProperty
-    private String generatedByService;
 
     /* (non-Javadoc)
      * @see edu.asu.diging.gilesecosystem.requests.impl.ICompletionNotificationRequest#getNotifier()
@@ -112,15 +109,5 @@ public class CompletionNotificationRequest extends Request implements ICompletio
     @Override
     public String getType() {
         return REQUEST_TYPE;
-    }
-    
-    @Override
-    public String getGeneratedByService() {
-        return generatedByService;
-    }
-
-    @Override
-    public void setGeneratedByService(String generatedByService) {
-        this.generatedByService = generatedByService;
     }
 }

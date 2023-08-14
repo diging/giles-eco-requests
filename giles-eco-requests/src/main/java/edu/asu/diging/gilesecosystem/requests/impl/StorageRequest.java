@@ -26,9 +26,6 @@ public class StorageRequest extends Request implements IStorageRequest {
     
     @JsonProperty
     private String filename;
-  
-    @JsonProperty
-    private String generatedByService;
    
     @Override
     public FileType getFileType() {
@@ -68,15 +65,5 @@ public class StorageRequest extends Request implements IStorageRequest {
     @Override
     public String getType() {
         return REQUEST_TYPE;
-    }
-
-    @Override
-    public String getGeneratedByService() {
-        return generatedByService;
-    }
-
-    @Override
-    public void setGeneratedByService(String generatedByService) {
-        this.generatedByService = generatedByService;
     }
 }

@@ -46,7 +46,10 @@ public abstract class Request implements IRequest {
     private String downloadPath;
     
     @JsonProperty
-    private String errorMsg;   
+    private String errorMsg;
+    
+    @JsonProperty
+    private String generatedByService;
     
     
     public Request() {
@@ -171,4 +174,14 @@ public abstract class Request implements IRequest {
     
     @JsonIgnore
     public abstract String getType();
+    
+    @Override
+    public String getGeneratedByService() {
+        return generatedByService;
+    }
+
+    @Override
+    public void setGeneratedByService(String generatedByService) {
+        this.generatedByService = generatedByService;
+    }
 }
